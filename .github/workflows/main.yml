@@ -28,9 +28,9 @@ jobs:
       - name: add a nojekyll file
         run: touch $GITHUB_WORKSPACE/www/.nojekyll
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
-          GITHUB_TOKEN: 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
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
           branch: gh-pages # The branch the action should deploy to.
           folder: www # The folder the action should deploy.
           clean: true
